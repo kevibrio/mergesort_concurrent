@@ -168,11 +168,11 @@ int main(int argc, char *argv[])
   {
     shm_array[i]=array_numbers[i];
   }
-  ordenar_mergesort(array_numbers,0,numbers_quantity-1);
+  ordenar_mergesort(shm_array,0,numbers_quantity-1);
   printf("El orden de sus números es el siguiente: \n");
   for(i=0;i<numbers_quantity;i++)
   {
-	  printf("%d,",array_numbers[i]);
+	  printf("%d,",shm_array[i]);
   }
   printf("\n\n");
   if (shmdt(shm_array) == -1)
